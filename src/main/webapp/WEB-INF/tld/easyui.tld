@@ -1036,6 +1036,12 @@
 			<description>是否多文件上传</description>
 		</attribute>
 		<attribute>
+			<name>queueSizeLimit</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>一次可以在队列中文件的最大数目</description>
+		</attribute>
+		<attribute>
 			<name>queueID</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>

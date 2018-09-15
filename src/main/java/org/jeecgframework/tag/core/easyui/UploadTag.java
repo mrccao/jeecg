@@ -29,6 +29,8 @@ public class UploadTag extends JeecgTag {
 	protected String extend="";//上传文件的扩展名	
 	protected String buttonText="浏览";//按钮文本
 	protected boolean multi=true;//是否多文件
+	/** queueSizeLimit add by caochun 20180915 */
+	protected int queueSizeLimit=999;//上传队列大小
 	protected String queueID="filediv";//文件容器ID
 	protected boolean dialog=true;//是否是弹出窗口模式
 	protected String callback;
@@ -87,6 +89,9 @@ public class UploadTag extends JeecgTag {
 	}
 	public void setMulti(boolean multi) {
 		this.multi = multi;
+	}
+	public void setQueueSizeLimit(int queueSizeLimit) {
+		this.queueSizeLimit = queueSizeLimit;
 	}
 	public void setUploader(String uploader) {
 		this.uploader = uploader;
@@ -160,6 +165,7 @@ public class UploadTag extends JeecgTag {
 				+"auto:"+auto+","
 				+"progressData:\'speed\'," 
 				+"multi:"+multi+","
+				+"queueSizeLimit:"+queueSizeLimit+","
 				+"height:25,"
 				+"overrideEvents:[\'onDialogClose\']," 
 				+"fileTypeDesc:\'文件格式:\'," 
